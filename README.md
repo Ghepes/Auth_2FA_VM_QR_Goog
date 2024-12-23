@@ -2,9 +2,18 @@
 SSH SFTP - VM 2-step authentication via Google AUTH the most secure 2-step authentication for your server that you need to install. installation time 5 minutes.
 I LOVE This Authenticator, if I knew it existed for VM server, I would have installed it a long time ago.
 
-![image](https://github.com/user-attachments/assets/6efa55e6-01b0-4872-b461-fe2c9a2ff2cf)
+WINSCP:
 
+![image](https://github.com/user-attachments/assets/6efa55e6-01b0-4872-b461-fe2c9a2ff2cf)
 ![image](https://github.com/user-attachments/assets/a7f8a4da-0e9d-4735-b95e-76048c292690)
+
+
+PUTTY:
+
+![image](https://github.com/user-attachments/assets/7101bcd9-7972-4802-a9d8-a5cc91e01ca3)
+
+
+
 
 ### Installation steps for Ubuntu TEST of Ubuntu 22.04.1 - ( Login as ROOT to SSH or SFTP to your VM or SERVER )
 

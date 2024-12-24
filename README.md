@@ -48,18 +48,18 @@ auth required pam_google_authenticator.so
 sudo nano /etc/ssh/sshd_config
 
 ```
-Make sure the ChallengeResponseAuthentication line is set to yes:
+Make sure the ChallengeResponseAuthentication line is set to yes ( /etc/ssh/sshd_config ):
 ```
 ChallengeResponseAuthentication yes
 
 ```
 
-Passwordless Authentication (SSH Key Authentication) Add :
+Passwordless Authentication (SSH Key Authentication) Add ( /etc/ssh/sshd_config ):
 ```
 AuthenticationMethods publickey,password publickey,keyboard-interactive
 ```
 
-Comment out any line that disables password authentication to allow OTP entry:
+Comment # out any line that disables password authentication to allow OTP entry ( /etc/ssh/sshd_config ):
 ```
 #PasswordAuthentication no
 

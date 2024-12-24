@@ -57,6 +57,8 @@ ChallengeResponseAuthentication yes
 ```
 
 Passwordless Authentication (SSH Key Authentication) Add ( /etc/ssh/sshd_config )
+![image](https://github.com/user-attachments/assets/a7df8336-8284-407f-99a1-146e1ec28e21)
+
 
 ```
 AuthenticationMethods publickey,password publickey,keyboard-interactive

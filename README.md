@@ -1,4 +1,4 @@
-# VM with Google Auth 2FA
+# SSH VM with Google Auth 2FA
 SSH SFTP - VM 2-step authentication via Google AUTH the most secure 2-step authentication for your server that you need to install. installation time 5 minutes.
 I LOVE This Authenticator, if I knew it existed for VM server, I would have installed it a long time ago.
 

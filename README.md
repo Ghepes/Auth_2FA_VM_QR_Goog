@@ -27,53 +27,63 @@ sudo apt-get install libpam-google-authenticator
 2. Set up Google Authenticator for a user:
 
 ```
-   google-authenticator
+google-authenticator
 ```
    And follow the steps carefully (yes or no) ... By skan QR code if it doesn't scan with the phone. There is a code to attach manually.
 
 
-3. Configure PAM for SSH:
+3. Configure PAM for SSH
+
 ```
-   sudo nano /etc/pam.d/sshd
+sudo nano /etc/pam.d/sshd
 ```
-Add to the end of the file:
+Add to the end of the file
+
 ```
 auth required pam_google_authenticator.so
 ```
 
-4. Modify your SSH configuration to enable two-step authentication
- Edit the file /etc/ssh/sshd_config:
+4. Modify your SSH configuration to enable two-step authentication 
+Edit the file /etc/ssh/sshd_config
 
 ```
 sudo nano /etc/ssh/sshd_config
 ```
 
-Make sure the ChallengeResponseAuthentication line is set to yes ( /etc/ssh/sshd_config ):
+Make sure the ChallengeResponseAuthentication line is set to yes ( /etc/ssh/sshd_config )
 
 ```
 ChallengeResponseAuthentication yes
 ```
 
-Passwordless Authentication (SSH Key Authentication) Add ( /etc/ssh/sshd_config ):
+Passwordless Authentication (SSH Key Authentication) Add ( /etc/ssh/sshd_config )
+
 ```
 AuthenticationMethods publickey,password publickey,keyboard-interactive
 ```
 
-Comment # out any line that disables password authentication to allow OTP entry ( /etc/ssh/sshd_config ):
+Comment # out any line that disables password authentication to allow OTP entry ( /etc/ssh/sshd_config )
+
 ```
-#PasswordAuthentication no
+# PasswordAuthentication no
 ```
 
-5. Restart SSH to apply the changes:
+5. Restart SSH to apply the changes
 
-   ```
-   sudo systemctl restart sshd
-   ```
-
-
+```
+sudo systemctl restart sshd
+```
 
 
 
-   This method will secure your SSH connections by adding an extra layer of verification, making it much more difficult for unauthorized access to your server.
+
+
+***   This method will secure your SSH connections by adding an extra layer of verification, making it much more difficult for unauthorized access to your server.
+
+
+
+
+LG
+By Iulian G.
 
 

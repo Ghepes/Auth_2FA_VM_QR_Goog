@@ -59,11 +59,13 @@ ChallengeResponseAuthentication yes
 Passwordless Authentication (SSH Key Authentication) Add ( /etc/ssh/sshd_config )
 ![image](https://github.com/user-attachments/assets/a7df8336-8284-407f-99a1-146e1ec28e21)
 
-### info: the setting "AuthenticationMethods publickey," is for authentication with id_rsa.pub and works very well with both 2FA with id_rsa.pub
-
 ```
 AuthenticationMethods publickey,password publickey,keyboard-interactive
 ```
+
+### info: the setting "AuthenticationMethods publickey," is for authentication with id_rsa.pub and works very well with both 2FA with id_rsa.pub
+
+
 
 Comment # out any line that disables password authentication to allow OTP entry ( /etc/ssh/sshd_config )
 

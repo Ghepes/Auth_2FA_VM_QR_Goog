@@ -26,9 +26,9 @@ sudo apt-get install libpam-google-authenticator
 
 2. Set up Google Authenticator for a user:
 
-   ```
+```
    google-authenticator
-   ```
+```
    And follow the steps carefully (yes or no) ... By skan QR code if it doesn't scan with the phone. There is a code to attach manually.
 
 
@@ -39,19 +39,19 @@ sudo apt-get install libpam-google-authenticator
 Add to the end of the file:
 ```
 auth required pam_google_authenticator.so
-
 ```
 
-4. Modify your SSH configuration to enable two-step authentication:
+4. Modify your SSH configuration to enable two-step authentication
  Edit the file /etc/ssh/sshd_config:
+
 ```
 sudo nano /etc/ssh/sshd_config
-
 ```
+
 Make sure the ChallengeResponseAuthentication line is set to yes ( /etc/ssh/sshd_config ):
+
 ```
 ChallengeResponseAuthentication yes
-
 ```
 
 Passwordless Authentication (SSH Key Authentication) Add ( /etc/ssh/sshd_config ):
@@ -62,13 +62,12 @@ AuthenticationMethods publickey,password publickey,keyboard-interactive
 Comment # out any line that disables password authentication to allow OTP entry ( /etc/ssh/sshd_config ):
 ```
 #PasswordAuthentication no
-
 ```
 
 5. Restart SSH to apply the changes:
+
    ```
    sudo systemctl restart sshd
-
    ```
 
 
